@@ -1,0 +1,86 @@
+.footer {
+	&__top {
+		.container {
+			display: flex;
+			@media (max-width: $lg) {
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+		}
+	}
+	&__info {
+		width: 450px;
+		margin-right: 110px;
+		@media (max-width: $lg) {
+			margin-right: 0;
+		}
+		@media (max-width: $md) {
+			width: 100%;
+		}
+	}
+	&__description {
+		@include fontStyle(18px, 32px);
+	}
+	&__title {
+		font-weight: 700;
+		margin-bottom: 20px;
+		@include fontStyle(26px, 36px);
+	}
+	&__navigation {
+		ul{
+			li {
+				list-style: none;
+				a {
+					color: #868686;
+					text-decoration: none;
+					@include fontStyle(18px, 32px);
+				}
+			}
+		}
+		@media (max-width: $lg) {
+			flex-basis: 248px;
+		}
+		@media (max-width: $md) {
+			flex-basis: 100%;
+			margin-top: 40px;
+		}
+	}
+	&__contacts {
+		margin-left: auto;
+    padding-left: 126px;
+		&-content {
+			display: flex;
+			margin: 0 -15px;
+			@media (max-width: $sm) {
+				flex-wrap: wrap;
+			}
+		}
+		&-group {
+			padding: 0 15px;
+			flex-basis: 50%;
+			@media (max-width: $sm) {
+				flex-basis: 100%;
+			}
+		}
+		&-item {
+			margin-bottom: 15px;
+			span {
+				color: $text;
+			}
+			color: #868686;
+		}
+		@media (max-width: $lg) {
+			padding-left: 0;
+			flex-basis: 100%;
+			margin-top: 40px;
+		}
+	}
+	&__bottom {
+		background-color: #242535;
+		color: $textFon;
+		padding: 50px 20px;
+		text-align: center;
+		margin-top: 60px;
+		@include fontStyle(20px, 23px);
+	}
+}

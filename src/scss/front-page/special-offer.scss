@@ -1,0 +1,27 @@
+.special-offer {
+	background: url("../img/bg_special_offer.jpg") center top no-repeat transparent;
+	color: $textFon;
+	display: flex;
+	align-items: center;
+	height: 900px;
+
+	&__title {
+		@include fontStyle(48px, 70px);
+		@media (max-width: $md) {
+			@include fontStyle(38px, 50px);
+		}
+	}
+	&__description {
+		font-family: "Nunito";
+		@include fontStyle(22px, 36px);
+		margin-top: 45px;
+	}
+	@media (max-width: $xl) {
+		height: 500px;
+	}
+	@media (max-width: $md) {
+    height: auto;
+    background-size: cover;
+    padding: 70px 0;
+	}
+}

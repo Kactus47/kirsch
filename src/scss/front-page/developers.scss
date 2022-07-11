@@ -1,0 +1,78 @@
+.developers {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $xl) {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    width: 610px;
+    @media (max-width: $mw) {
+      width: 500px;
+    }
+    @media (max-width: $xl) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  &__speciality{
+    width: 648px;
+    position: relative;
+    @media (max-width: $mw) {
+      width: 400px;
+    }
+    @media (max-width: $xl) {
+      margin-left: 196px;
+      margin-top: 40px;
+    }
+    @media (max-width: $md) {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 0;
+      img {
+        display: none;
+      }
+      a {
+        position: relative;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+        bottom: 0;
+      }
+    }
+  }
+  &__link{
+    position: absolute;
+    left: -196px;
+    bottom: 68px;
+    padding: 40px;
+    background: $actions;
+    width: 338px;
+    text-decoration: none;
+    overflow: hidden;
+    &::after {
+      content: "";
+      opacity: 0.68;
+      border: 40px solid #FF8217;
+      width: 242px;
+      height: 242px;
+      position: absolute;
+      bottom: -211px;
+      right: -181px;
+      border-radius: 50%;
+    }
+    * {
+      position: relative;
+      z-index: 1;
+    }
+    span {
+      @include fontStyle(24px, 40px);
+      font-weight: 700;
+      color: $textFon;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex-basis: 100%;
+	justify-content: space-between;
+	margin-top: 40px;
+	@media (max-width: $md) {
+		width: 100%;
+	}
+	* {
+		width: 100%;
+		margin-bottom: 12px;
+		border: 1px solid #D1D1D1;
+		border-radius: 2px;
+		height: 60px;
+		padding: 0 25px;
+	}
+	input[name=name],
+	input[name=email] {
+		flex-basis: calc(50% - 6px);
+		@media (max-width: $md) {
+			flex-basis: 100%;
+		}
+	}
+	textarea {
+		padding-top: 17px;
+    padding-bottom: 17px;
+    height: 176px;
+    resize: none;
+	}
+	input[type=text],
+	input[type=email],
+	textarea {
+		font-family: Poppins;
+		font-size: 18px;
+	}
+	&__sumbit {
+		border: none;
+		margin-top: 28px;
+		@media (max-width: $md) {
+			font-size: 12px;
+		}
+	}
+}

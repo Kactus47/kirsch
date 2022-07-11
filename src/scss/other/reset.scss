@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+body {
+	font-family: Poppins;
+	@include fontStyle(18px, 32px);
+	color: $text;
+	@media (max-width: $md) {
+		@include fontStyle(16px, 28px);
+	}
+}
+img {
+	max-width: 100%;
+}
+p{
+	margin-bottom: 20px;
+}
+p:last-child {
+	margin-bottom: 0;
+}

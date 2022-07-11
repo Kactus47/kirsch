@@ -1,0 +1,50 @@
+.reviews {
+	overflow: hidden;
+	&__title{
+		margin-bottom: 80px;
+		@media (max-width: $md) {
+			margin-bottom: 40px;
+		}
+	}
+	&__item{
+		box-shadow: 12px 24px 120px rgba(194, 199, 220, 0.3);
+		border-radius: 12px;
+		padding: 38px 44px;
+	}
+	&__image {
+		height: 42px;
+	}
+	&__text {
+		margin: 30px 0 20px;
+	}
+	&__author {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $sm) {
+			flex-wrap: wrap;
+		}
+	}
+	&__name {
+		font-weight: bold;
+		@media (max-width: $sm) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+	&__stars {
+		display: flex;
+	}
+	&__star {
+		width: 24px;
+		height: 24px;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__star--on {
+		background: url("../img/star_on.svg") center top no-repeat transparent;
+	}
+	&__star--off {
+		background: url("../img/star_off.svg") center top no-repeat transparent;
+	}
+}

@@ -1,0 +1,125 @@
+
+.container {
+	padding: 0 15px;
+	max-width: $mw;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $mw) {
+		max-width: $xl;
+	}
+	@media (max-width: $xl) {
+		max-width: $lg;
+	}
+	@media (max-width: $lg) {
+		max-width: $md;
+	}
+	@media (max-width: $md) {
+		max-width: $sm;
+	}
+}
+
+.title {
+	@include fontStyle(40px, 60px);
+	font-weight: 300;
+	@media (max-width: $md) {
+		@include fontStyle(30px, 50px);
+	}
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.btn {
+	height: 58px;
+	padding: 0 60px;
+	border-radius: 4px;
+	color: $textFon;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: all 0.2s;
+}
+.btn-black {
+	background: $text;
+	&:hover {
+		background: $hoverBtnBlack;
+	}
+}
+.btn-yellow {
+	background: $actions;
+	&:hover {
+		background: $hoverBtnYellow;
+	}
+
+}
+
+
+.indent {
+	margin: 160px 0;
+	@media (max-width: $mw){
+		margin: 100px 0;
+	}
+	@media (max-width: $lg){
+		margin: 80px 0;
+	}
+	@media (max-width: $sm){
+		margin: 40px 0;
+	}
+} 
+
+@keyframes arrow_traffik {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 40px;
+	}
+}
+
+.link__arrow {
+	position: relative;
+	height: 3px;
+	width: 39px;
+	display: block;
+	animation-name: arrow_traffik;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	&:after,
+	&:before {
+    height: 3px;
+    position: absolute;
+    right: -3px;
+    width: 15px;
+    content: "";
+    border-radius: 2px;
+	}
+	&:after {
+    top: -4px;
+		transform: rotate(35deg);
+	}
+	&:before {
+		bottom: -4px;
+		transform: rotate(-35deg);
+	}
+}
+.link__arrow-white {
+	background-color: $textFon;
+	&:after,
+	&:before {
+    background-color: $textFon;
+	}
+}
+.link__arrow-yellow {
+	background-color: $actions;
+	&:after,
+	&:before {
+    background-color: $actions;
+	}
+}

@@ -1,0 +1,33 @@
+.header {
+	padding: 15px 0;
+	background-color: $textFon;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $md) {
+			justify-content: center;
+		}
+		div {
+			@media (max-width: $md) {
+				display: none;
+			}
+		}
+	}
+	&__feedback {
+		width: 318px;
+		height: 58px;
+		background: $actions;
+		border-radius: 4px;
+		color: $textFon;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		cursor: pointer;
+		&:hover {
+			background: $hoverBtnYellow;
+		}
+	}
+}

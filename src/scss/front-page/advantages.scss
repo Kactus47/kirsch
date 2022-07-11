@@ -1,0 +1,66 @@
+.advantages {
+	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
+	@media (max-width: $lg) {
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		padding: 0 10px;
+		width: 25%;
+		position: relative;
+		@media (max-width: $lg) {
+			width: 50%;
+			&:nth-child(1),
+			&:nth-child(2){
+				margin-bottom: 65px;
+			}
+		}
+		@media (max-width: $sm) {
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 65px;
+			}
+		}
+	}
+	&__content {
+		border: 1px solid #eeeeee;
+		box-shadow: 0px 4px 45px rgba(5, 103, 248, 0.05);
+		padding: 20px;
+		text-align: center;
+		height: 100%;
+	}
+	&__icon {
+		background-color: $actions !important;
+		border-radius: 4px;
+		width: 120px;
+		height: 120px;
+		margin-bottom: 30px;
+		display: inline-block;
+		margin-top: -56px;
+		vertical-align: middle;
+	}
+	&__icon_stellensuchen {
+		background: url("../img/advantages_1.svg") center center no-repeat;
+	}
+	&__icon_projekte {
+		background: url("../img/advantages_2.svg") center center no-repeat;
+	}
+	&__icon_dauerhafter {
+		background: url("../img/advantages_3.svg") center center no-repeat;
+	}
+	&__icon_halbe {
+		background: url("../img/advantages_4.svg") center center no-repeat;
+	}
+
+	&__title {
+		@include fontStyle(20px, 30px);
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-family: "Nunito";
+		@include fontStyle(18px, 26px);
+	}
+}

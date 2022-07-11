@@ -1,0 +1,14 @@
+.reviews-slider {
+	&.swiper {
+		overflow: visible;
+	}
+	&__navigation {
+		text-align: center;
+    margin-top: 80px;
+		span {
+			background: $actions;
+			width: 14px;
+			height: 14px;
+		}
+	}
+}

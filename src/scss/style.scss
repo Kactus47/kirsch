@@ -1,0 +1,39 @@
+//variables
+//breakpoints
+$mw: 1610px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+//Color Scheme
+$text: #000000;
+$actions: #F06E00;
+$textFon: #FFFFFF;
+$hoverBtnBlack: #353434;
+$hoverBtnYellow: #ba5401; 
+
+//mixin
+@mixin fontStyle($fs, $lh) {
+	font-size: $fs;
+	line-height: $lh;
+}
+
+@import "other/fonts";
+@import "other/reset";
+@import "other/global";
+@import "layout/header";
+@import "front-page/special-offer";
+@import "front-page/software-entwickler";
+@import "front-page/advantages";
+@import "front-page/developers";
+@import "front-page/partners";
+@import "front-page/reviews";
+@import "global-blocks/reviews-slider";
+@import "front-page/faq-block";
+@import "global-blocks/faq";
+@import "front-page/text-block";
+@import "front-page/feedback";
+@import "global-blocks/form";
+@import "front-page/call-you";
+@import "layout/footer";

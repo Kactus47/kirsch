@@ -1,0 +1,19 @@
+.call-you {
+	&__content {
+		background: url("../img/bg_call-you.jpg") center top no-repeat transparent;
+		color: $textFon;
+		padding: 80px;
+		height: 320px;
+		@media (max-width: $lg) {
+			background-size: cover;
+			height: auto;
+			padding: 50px; 
+		}
+		@media (max-width: $md) {
+			padding: 30px; 
+		}
+	}
+	&__link{
+		margin-top: 30px;
+	}
+}
